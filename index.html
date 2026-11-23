@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHMED STORE</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="store-logo">
+    <span class="logo-icon">A</span>
+    <span class="logo-text">AHMED <strong>STORE</strong></span>
+</div>
+    <nav class="main-nav">
+    <a href="#">الرئيسية 🏠</a>
+    <a href="#products">الموبايلات 📱</a>
+    <a href="#accessories">الإكسسوارات 🎧</a>
+    <a href="#repair">الصيانة 🔧</a>
+</nav>
+    <header class="hero">
+    <h1>AHMED STORE 📱</h1>
+    <h2>أهلاً بيك في محلك المفضل ❤️</h2>
+    <p>موبايلات جديدة ومستعملة وإكسسوارات وصيانة</p>
+
+    <div class="hero-buttons">
+        <a href="#products" class="btn">شوف الموبايلات</a>
+        <a href="#accessories" class="btn">الإكسسوارات</a>
+        <a href="#repair" class="btn">الصيانة</a>
+    </div>
+</header>
+<section class="products" id="products">
+
+    <h2>📱 أحدث الموبايلات</h2>
+    <p class="products-desc">دور على جهازك واختار اللي يناسبك</p>
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="ابحث عن اسم الموبايل..."
+    >
+
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">الكل</button>
+        <button class="filter-btn" data-filter="new">جديد</button>
+        <button class="filter-btn" data-filter="used">مستعمل</button>
+    </div>
+
+    <div class="product-grid" id="productGrid">
+
+        <div class="product-card" data-type="new">
+<div class="phone-image">
+    <img src="images/samsung-a55.jpg.jfif" alt="Samsung Galaxy A55">
+</div>
+            <span class="condition new">جديد</span>
+            <h3>Samsung Galaxy A55</h3>
+            <p>جهاز جديد - بيانات تجريبية</p>
+            <h4>اسأل عن السعر</h4>
+            <a href="#contact" class="btn">استفسر الآن</a>
+        </div>
+
+        <div class="product-card" data-type="used">
+            <div class="phone-image">
+    <img src="images/iphone-13.jpg" alt="iPhone 13">
+</div>
+            <span class="condition used">مستعمل</span>
+            <h3>iPhone 13</h3>
+            <p>جهاز مستعمل - بيانات تجريبية</p>
+            <h4>اسأل عن السعر</h4>
+            <a href="#contact" class="btn">استفسر الآن</a>
+        </div>
+
+
+
+        <div class="product-card" data-type="new">
+        <div class="phone-image">
+    <img src="images/redmi-note-13.jpg" alt="Redmi Note 13">
+</div>
+    
+
+            <span class="condition new">جديد</span>
+            <h3>Redmi Note 13</h3>
+            <p>جهاز جديد - بيانات تجريبية</p>
+            <h4>اسأل عن السعر</h4>
+            <a href="#contact" class="btn">استفسر الآن</a>
+        </div>
+
+        <div class="product-card" data-type="used">
+        <div class="phone-image">
+    <img src="images/samsung-s22.jpg" alt="Samsung S22">
+</div>
+            <span class="condition used">مستعمل</span>
+            <h3>Samsung S22</h3>
+            <p>جهاز مستعمل - بيانات تجريبية</p>
+            <h4>اسأل عن السعر</h4>
+            <a href="#contact" class="btn">استفسر الآن</a>
+        </div>
+
+    </div>
+
+    <p id="noResults" hidden>مفيش أجهزة مطابقة للبحث.</p>
+
+</section>
+<script src="script.js"></script>
+
+<section class="repair-section" id="repair">
+    <h2>🔧 مركز صيانة AHMED STORE</h2>
+    <p>سيب جهازك علينا، وإحنا نهتم بيه</p>
+
+    <div class="repair-grid">
+        <div class="repair-card">📱
+            <h3>صيانة الشاشات</h3>
+            <p>فحص واستبدال الشاشات</p>
+        </div>
+
+        <div class="repair-card">🔋
+            <h3>تغيير البطاريات</h3>
+            <p>فحص البطارية واستبدالها</p>
+        </div>
+
+        <div class="repair-card">🔌
+            <h3>مشاكل الشحن</h3>
+            <p>إصلاح أعطال الشحن</p>
+        </div>
+
+        <div class="repair-card">🔊
+            <h3>الصوت والسماعات</h3>
+            <p>فحص وإصلاح مشاكل الصوت</p>
+        </div>
+    </div>
+
+    <h3>احجز طلب صيانة</h3>
+
+    <form id="repairForm">
+        <input type="text" id="customerName"
+            placeholder="اسمك" required>
+
+        <input type="tel" id="customerPhone"
+            placeholder="رقم تليفونك" required>
+
+        <input type="text" id="phoneModel"
+            placeholder="نوع الموبايل" required>
+
+        <textarea id="repairProblem"
+            placeholder="اشرح العطل الموجود في جهازك"
+            required></textarea>
+
+        <button type="submit">إرسال طلب الصيانة</button>
+    </form>
+</section>
+<section class="accessories" id="accessories">
+    <h2>إكسسوارات الموبايلات</h2>
+    <p>كل احتياجات موبايلك في مكان واحد</p>
+
+    <div class="accessories-grid">
+
+        <div class="accessory-card">
+        <img class="accessory-image" src="images/charger.jpg" alt="شاحن موبايل">
+            <h3>الشواحن</h3>
+            <p>شواحن لجميع أنواع الموبايلات</p>
+            <a href="https://wa.me/201065522986?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D8%B4%D9%88%D8%A7%D8%AD%D9%86"
+class="btn" target="_blank">
+اسأل عن الشواحن
+</a>
+        </div>
+        
+
+        <div class="accessory-card">
+        <img class="accessory-image" src="images/headphones.jpg" alt="سماعات">
+            <h3>السماعات</h3>
+            <p>سماعات سلك وبلوتوث</p>
+            <a href="https://wa.me/201065522986?text=عايز أستفسر عن السماعات"
+class="btn" target="_blank">
+اسأل عن السماعات
+</a>
+        </div>
+
+        <div class="accessory-card">
+        <img class="accessory-image" src="images/phone-cases.jpg" alt="جرابات الموبايلات">
+            <h3>الجرابات</h3>
+            <p>جرابات بأشكال وموديلات مختلفة</p>
+            <a href="https://wa.me/201065522986?text=عايز أستفسر عن الجرابات"
+class="btn" target="_blank">
+اسأل عن الجرابات
+</a>
+        </div>
+
+        <div class="accessory-card">
+        <img class="accessory-image" src="images/screen-protector.jpg" alt="حماية الشاشة">
+            <h3>اسكرينات الحماية</h3>
+            <p>حماية لشاشة موبايلك</p>
+            <a href="https://wa.me/201065522986?text=عايز أستفسر عن اسكرينات الحماية"
+class="btn" target="_blank">
+اسأل عن اسكرينات الحماية
+</a>
+        </div>
+
+    </div>
+</section>
+
+
+
+</section>
+<section class="contact-section" id="contact">
+    <section class="working-hours" id="hours">
+    <h2>🕒 مواعيد العمل</h2>
+
+    <div class="hours-card">
+        <div class="hours-icon">🏪</div>
+        <h3>أهلاً بيكم في AHMED STORE</h3>
+
+        <p>نستقبلكم يوميًا</p>
+
+        <div class="hours-time">
+            <span>موعد الفتح</span>
+            <strong>2:00 ظهرًا</strong>
+        </div>
+
+        <div class="hours-time">
+            <span>موعد الإغلاق</span>
+            <strong>4:00 فجرًا</strong>
+        </div>
+
+        <p class="hours-note">مواعيد العمل ممتدة حتى فجر اليوم التالي ❤️</p>
+    </div>
+</section>
+    <h2>تواصل معنا ❤️</h2>
+    <p>أهلاً بيك في AHMED STORE، إحنا في خدمتك دايمًا</p>
+
+    <div class="contact-card">
+        <h3>📱 تواصل مع أحمد</h3>
+        <p>للاستفسار عن الموبايلات والإكسسوارات والصيانة</p>
+
+        <a href="https://wa.me/201065522986"
+           class="btn" target="_blank">
+            تواصل عبر واتساب
+        </a>
+
+        <a href="tel:+201065522986" class="btn">
+            اتصل بنا
+        </a>
+    </div>
+</section>
+<section class="about-section" id="about">
+    <h2>من نحن ❤️</h2>
+    <p>
+        أهلاً بيكم في AHMED STORE،
+        وجهتكم لشراء الموبايلات الجديدة والمستعملة
+        والإكسسوارات، مع تقديم خدمات صيانة للموبايلات.
+    </p>
+
+    <div class="about-features">
+        <div>📱 موبايلات جديدة ومستعملة</div>
+        <div>🎧 إكسسوارات متنوعة</div>
+        <div>🔧 خدمات صيانة</div>
+    </div>
+</section>
+<footer class="developer-footer">
+    <p>Designed & Developed by</p>
+    <h3>Amr Khaled ❤️</h3>
+    <small>© 2026 AHMED STORE - All Rights Reserved</small>
+</footer>
+</body>
+
+</html>
